@@ -1,0 +1,693 @@
+@charset "utf-8";
+/* 文件開頭說明 */
+/* 
+* Page name:Tiffany & Co.
+* Copyright 2022
+* Auther: Arthur Ming
+* Licensed
+*/
+
+/* 目錄、區段的註解 */
+/* ---------------------------*\
+    Content 
+\* ---------------------------*/
+
+/* 
+ * Content-----------------You are reading it!
+ * Global-----------------Set commom styles
+ * Layout-----------------Set grid
+ * Components------------------Set components styles
+*/
+
+/* ---------------------------*\
+    Global 
+\* ---------------------------*/
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "微軟正黑體";
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ---------------------------*\
+    Layout
+\* ---------------------------*/
+.container {
+  width: 1440px;
+  display: block;
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+}
+
+.spec .container {
+  width: 1280px;
+}
+
+.row {
+  /* border: 1px solid black; */
+  margin: 0 -16px;
+}
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col-1-2,
+.col-1-3,
+.col-1-4,
+.col-1-5,
+.col-1-6 {
+  /* border: 2px solid red; */
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 100%;
+}
+
+.col-1-2 {
+  width: 50%;
+}
+
+.col-1-3 {
+  width: 33.33333333%;
+}
+
+.col-1-4 {
+  width: 25%;
+}
+
+.col-1-5 {
+  width: 20%;
+}
+.col-1-6 {
+  width: 16.6666666%;
+}
+
+/* ---------------------------*\
+    Components 
+\* ---------------------------*/
+
+/* btn */
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 24px;
+  line-height: 20px;
+  padding: 10px 25px;
+  border: 1px solid black;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ffffff;
+  margin-bottom: 50px;
+}
+.btn .btn-in {
+  display: inline-block;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.btn:hover .btn-in {
+  content: "";
+  border-bottom: 2px solid #94d6d0;
+  display: inline-block;
+}
+.btn:hover {
+  content: "";
+  padding-bottom: 8px;
+}
+
+.btn2 {
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-top: 8px;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.btn2-in {
+  font-style: normal;
+  display: inline-block;
+}
+
+.btn2:hover .btn2-in {
+  content: "";
+  display: inline-block;
+  border-bottom: 2px solid #94d6d0;
+}
+.btn2:hover {
+  content: "";
+  padding-bottom: 2px;
+}
+
+/* image */
+.image-container1 {
+  width: 100%;
+}
+.image-container1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+.image-container1 .image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.spec .image-container1 {
+  width: 100%;
+}
+.spec .image-container1::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+.spec .image-container1 .image {
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 518px;
+  height: 643px;
+}
+
+.image-container3 {
+  width: 100%;
+}
+.image-container3::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 100%;
+}
+.image-container3 .image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* jumbotron */
+.jumbotron {
+  /* height: 800px; */
+  /* border: 1px solid black; */
+  padding-top: 220px;
+  padding-bottom: 400px;
+  background-image: url(../img/banner.jpeg);
+  background-size: contain;
+  background-position: bottom;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+/* hero */
+.hero {
+  padding-top: 110px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.news .hero,
+.spec .hero {
+  padding-bottom: 50px;
+}
+
+.news .hero {
+  padding-top: 0;
+}
+
+.spec .hero {
+  padding-top: 45px;
+  padding-bottom: 20px;
+}
+
+/* navbar */
+.nav-bar {
+  display: block;
+  height: 100px;
+  /* border: 1px solid black; */
+  overflow: hidden;
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  background-color: white;
+
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar .top {
+  height: 4px;
+  width: 100%;
+  background-color: #94d6d0;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav-bar .left-icon-container {
+  padding-left: 22px;
+  margin-top: 24px;
+}
+
+.nav-bar .icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* padding-right: 16px; */
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  /* border: 1px solid black; */
+  margin-right: 35px;
+}
+.iconword {
+  display: inline-block;
+  position: absolute;
+  left: 30px;
+  white-space: nowrap;
+  font-size: 12px;
+  padding-top: 2px;
+  font-weight: 600;
+}
+
+.logo-container {
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-image {
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  left: 0;
+  top: 0;
+  width: 190px;
+  height: 28px;
+  margin-right: 80px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  /* border: 1px solid black; */
+  display: inline-block;
+}
+
+.nav-bar .right-icon-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 24px;
+  /* border: 1px solid black; */
+}
+
+.right-icon-container .icon {
+  margin-left: 45px;
+}
+
+.nav-bar-detail .nav-list {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.nav-bar-detail .nav-list .nav-item {
+  display: inline-block;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.story {
+  position: absolute;
+  top: 150px;
+  left: 80px;
+}
+.story .title {
+  font-family: "Amiri", serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.story .subtitle {
+  font-size: 14px;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+
+.section-intro .title {
+  font-family: "Amiri", serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.service-item {
+  width: 100%px;
+  /* height: 330px; */
+}
+
+.works {
+  margin-top: 120px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.works .btn-in {
+  font-size: 16px;
+  padding-bottom: 1px;
+}
+
+.divide {
+  height: 4px;
+  width: 1400px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #94d6d0;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.news .title {
+  font-family: "微軟正黑體";
+  font-weight: 600;
+}
+
+.image-container-12 {
+  width: 100%;
+}
+
+.image-container-12::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 50%;
+}
+
+.image-container-12 .image {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.info .image-container-12 {
+  background-color: #f8f8f8;
+}
+
+.product-info {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.product-info span {
+  font-style: italic;
+}
+
+.icon-container2 {
+  background-size: contain;
+  /* border: 1px solid black; */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-top: 10px;
+}
+
+.down {
+  /* border: 1px solid black; */
+  display: block;
+  margin-top: 40px;
+}
+
+.down .product-name {
+  font-family: "Amiri", serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.demo-wall {
+  padding-bottom: 20px;
+}
+
+.cate .container {
+  margin-top: 20px;
+  padding-bottom: 0px;
+}
+
+.cate .title {
+  padding-bottom: 20px;
+  letter-spacing: 0px;
+  font-family: "微軟正黑體";
+  font-weight: 500;
+}
+
+.cate .subtitle {
+  font-weight: bolder;
+}
+
+.category {
+  margin-top: 40px;
+  padding-bottom: 50px;
+}
+
+.love .jumbotron {
+  background-image: url(../img/banner_2.jpeg);
+  padding-top: 124px;
+  /* width: 1600px; */
+  background-size: cover;
+}
+
+.love .title {
+  letter-spacing: -2px;
+}
+
+.love .btn2 {
+  font-weight: bolder;
+  margin-top: 15px;
+}
+
+.space-page {
+  width: 100%;
+  height: 120px;
+}
+
+.exper {
+  background-color: #fafafa;
+  padding-top: 40px;
+}
+
+.exper .col-1-3 {
+  text-align: center;
+}
+
+.exper .image-container3 {
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  margin: 12px auto;
+  margin-top: 40px;
+}
+
+.exper-info {
+  line-height: 36px;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.exper .container {
+  padding-bottom: 180px;
+}
+
+.white-space {
+  background-color: white;
+  height: 15px;
+  width: 100%;
+  /* border: 1px solid white; */
+}
+
+.exper .title {
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.footer-bar {
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #94d6d0;
+  border-bottom: 10px solid #94d6d0;
+  font-weight: bold;
+}
+.footer-container {
+  display: inline-block;
+  /* border: 1px solid black; */
+  width: 800px;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.footer-service {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 15px;
+  font-size: 18px;
+}
+
+.footer-container .button {
+  margin-left: 20px;
+}
+
+.tiffany-news {
+  float: right;
+  margin-right: 80px;
+  padding-top: 35px;
+  padding-right: 30px;
+  display: inline-block;
+  /* margin-top: 35px; */
+  /* border: 1px solid black; */
+}
+
+.news-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.space {
+  padding-bottom: 40px;
+}
+
+.tiffany-news .btn {
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.tiffany-end {
+  margin-top: 60px;
+  padding-bottom: 15px;
+}
+
+.button-location {
+  display: inline-block;
+}
+
+.location {
+  margin-left: 33px;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.location .input {
+  border: none;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.copyright {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.tiffany-end .row {
+  width: 1400px;
+}
+
+.copyright.col-1-3 {
+  text-align: center;
+}
+.copy {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.social-media .row {
+  width: 300px;
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.social-media .icon-container {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+}
+
+.social-media {
+  text-align: center;
+}
